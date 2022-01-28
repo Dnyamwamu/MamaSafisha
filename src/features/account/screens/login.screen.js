@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { ActivityIndicator, Colors } from "react-native-paper";
+import React, { useState, useContext } from 'react'
+import { ActivityIndicator, Colors } from 'react-native-paper'
 
 import {
   AccountBackground,
@@ -9,48 +9,48 @@ import {
   AuthInput,
   ErrorContainer,
   Title,
-} from "../components/account.styles";
-import { Text } from "../../../components/typography/text.component";
-import { Spacer } from "../../../components/spacer/spacer.component";
-import { AuthenticationContext } from "../../../services/authentication/authentication.context";
+} from '../components/account.styles'
+import { Text } from '../../../components/typography/text.component'
+import { Spacer } from '../../../components/spacer/spacer.component'
+import { AuthenticationContext } from '../../../services/authentication/authentication.context'
 
 export const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { onLogin, error, isLoading } = useContext(AuthenticationContext);
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const { onLogin, error, isLoading } = useContext(AuthenticationContext)
   return (
     <AccountBackground>
       <AccountCover />
-      <Title>Meals To Go</Title>
+      <Title>Mama Safisha</Title>
       <AccountContainer>
         <AuthInput
-          label="E-mail"
+          label='E-mail'
           value={email}
-          textContentType="emailAddress"
-          keyboardType="email-address"
-          autoCapitalize="none"
+          textContentType='emailAddress'
+          keyboardType='email-address'
+          autoCapitalize='none'
           onChangeText={(u) => setEmail(u)}
         />
-        <Spacer size="large">
+        <Spacer size='large'>
           <AuthInput
-            label="Password"
+            label='Password'
             value={password}
-            textContentType="password"
+            textContentType='password'
             secureTextEntry
-            autoCapitalize="none"
+            autoCapitalize='none'
             onChangeText={(p) => setPassword(p)}
           />
         </Spacer>
         {error && (
-          <ErrorContainer size="large">
-            <Text variant="error">{error}</Text>
+          <ErrorContainer size='large'>
+            <Text variant='error'>{error}</Text>
           </ErrorContainer>
         )}
-        <Spacer size="large">
+        <Spacer size='large'>
           {!isLoading ? (
             <AuthButton
-              icon="lock-open-outline"
-              mode="contained"
+              icon='lock-open-outline'
+              mode='contained'
               onPress={() => onLogin(email, password)}
             >
               Login
@@ -60,11 +60,11 @@ export const LoginScreen = ({ navigation }) => {
           )}
         </Spacer>
       </AccountContainer>
-      <Spacer size="large">
-        <AuthButton mode="contained" onPress={() => navigation.goBack()}>
+      <Spacer size='large'>
+        <AuthButton mode='contained' onPress={() => navigation.goBack()}>
           Back
         </AuthButton>
       </Spacer>
     </AccountBackground>
-  );
-};
+  )
+}

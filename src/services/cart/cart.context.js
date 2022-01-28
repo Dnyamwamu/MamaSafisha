@@ -1,88 +1,88 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { createContext, useState, useEffect, useContext } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
-import { AuthenticationContext } from "../authentication/authentication.context";
+import { AuthenticationContext } from '../authentication/authentication.context'
 
-export const CartContext = createContext();
+export const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
-  const { user } = useContext(AuthenticationContext);
+  const { user } = useContext(AuthenticationContext)
 
-  const [cart, setCart] = useState([]);
-  const [restaurant, setRestaurant] = useState(null);
+  const [cart, setCart] = useState([])
+  const [cleaningService, setCleaningService] = useState(null)
 
-  const [sum, setSum] = useState(0);
+  const [sum, setSum] = useState(0)
 
   const saveCart = async (rst, crt, uid) => {
     try {
-      const jsonValue = JSON.stringify({ restaurant: rst, cart: crt });
-      await AsyncStorage.setItem(`@cart-${uid}`, jsonValue);
+      const jsonValue = JSON.stringify({ cleaningService: rst, cart: crt })
+      await AsyncStorage.setItem(`@cart-${uid}`, jsonValue)
     } catch (e) {
-      console.log("error storing", e);
+      console.log('error storing', e)
     }
-  };
+  }
 
   const loadCart = async (uid) => {
     try {
-      const value = await AsyncStorage.getItem(`@cart-${uid}`);
+      const value = await AsyncStorage.getItem(`@cart-${uid}`)
       if (value !== null) {
-        const { restaurant: rst, cart: crt } = JSON.parse(value);
-        setRestaurant(rst);
-        setCart(crt);
+        const { cleaningService: rst, cart: crt } = JSON.parse(value)
+        setCleaningService(rst)
+        setCart(crt)
       }
     } catch (e) {
-      console.log("error storing", e);
+      console.log('error storing', e)
     }
-  };
+  }
 
   useEffect(() => {
     if (user && user.uid) {
-      loadCart(user.uid);
+      loadCart(user.uid)
     }
-  }, [user]);
+  }, [user])
 
   useEffect(() => {
     if (user && user.uid) {
-      saveCart(restaurant, cart, user.uid);
+      saveCart(cleaningService, cart, user.uid)
     }
-  }, [restaurant, cart, user]);
+  }, [cleaningService, cart, user])
 
   useEffect(() => {
     if (!cart.length) {
-      setSum(0);
-      return;
+      setSum(0)
+      return
     }
     const newSum = cart.reduce((acc, { price }) => {
-      return (acc += price);
-    }, 0);
-    setSum(newSum);
-  }, [cart]);
+      return (acc += price)
+    }, 0)
+    setSum(newSum)
+  }, [cart])
 
   const add = (item, rst) => {
-    if (!restaurant || restaurant.placeId !== rst.placeId) {
-      setRestaurant(rst);
-      setCart([item]);
+    if (!cleaningService || cleaningService.placeId !== rst.placeId) {
+      setCleaningService(rst)
+      setCart([item])
     } else {
-      setCart([...cart, item]);
+      setCart([...cart, item])
     }
-  };
+  }
 
   const clear = () => {
-    setCart([]);
-    setRestaurant(null);
-  };
+    setCart([])
+    setCleaningService(null)
+  }
 
   return (
     <CartContext.Provider
       value={{
         addToCart: add,
         clearCart: clear,
-        restaurant,
+        cleaningService,
         cart,
         sum,
       }}
     >
       {children}
     </CartContext.Provider>
-  );
-};
+  )
+}

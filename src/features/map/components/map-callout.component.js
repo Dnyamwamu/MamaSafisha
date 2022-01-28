@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import { CompactRestaurantInfo } from "../../../components/restaurant/compact-restaurant-info.component";
+import { CompactCleaningServiceInfo } from '../../../components/cleaningService/compact-cleaningService-info.component'
 
-export const MapCallout = ({ restaurant }) => (
-  <CompactRestaurantInfo isMap restaurant={restaurant} />
-);
+export const MapCallout = ({ cleaningService }) => (
+  <CompactCleaningServiceInfo isMap cleaningService={cleaningService} />
+)

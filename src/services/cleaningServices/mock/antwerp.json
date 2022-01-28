@@ -69,14 +69,14 @@
       "place_id": "some place id 2",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "reference": "",
       "scope": "",
       "types": [
         "spa",
         "lodging",
-        "restaurant",
+        "cleaningService",
         "food",
         "gym",
         "health",
@@ -119,7 +119,7 @@
       "place_id": "some place id 3",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "rating": 4.3,
       "reference": "",
@@ -127,7 +127,7 @@
       "types": [
         "travel_agency",
         "lodging",
-        "restaurant",
+        "cleaningService",
         "food",
         "point_of_interest",
         "establishment"
@@ -153,7 +153,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "The Glorious Inn",
       "opening_hours": {
         "open_now": false
@@ -228,8 +228,8 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "De Peerdestal | Restaurant Antwerpen",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
+      "name": "De Peerdestal | CleaningService Antwerpen",
       "opening_hours": {
         "open_now": true
       },
@@ -266,7 +266,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Huis De Colvenier",
       "opening_hours": {
         "open_now": true
@@ -303,7 +303,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Il Milanese by Lollapalooza",
       "opening_hours": {
         "open_now": true
@@ -341,7 +341,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Het Vermoeide Model",
       "opening_hours": {
         "open_now": true
@@ -379,7 +379,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "'t Fornuis",
       "opening_hours": {
         "open_now": false
@@ -395,13 +395,18 @@
       "place_id": "some place id 10",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.7,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 152,
       "vicinity": "Reyndersstraat 24, Antwerpen"
     },
@@ -423,7 +428,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Lunchbox",
       "opening_hours": {
         "open_now": false
@@ -439,14 +444,14 @@
       "place_id": "some place id 11",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
       "reference": "",
       "scope": "",
       "types": [
-        "restaurant",
+        "cleaningService",
         "bar",
         "food",
         "point_of_interest",
@@ -473,7 +478,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Zuiderterras / RAS",
       "opening_hours": {
         "open_now": true
@@ -489,14 +494,14 @@
       "place_id": "some place id 12",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
       "reference": "",
       "scope": "",
       "types": [
-        "restaurant",
+        "cleaningService",
         "cafe",
         "food",
         "point_of_interest",
@@ -523,7 +528,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Pazzo",
       "opening_hours": {
         "open_now": false
@@ -539,13 +544,18 @@
       "place_id": "some place id 13",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.5,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 316,
       "vicinity": "Oudeleeuwenrui 12, Antwerpen"
     },
@@ -567,7 +577,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Horta Grand Café & Art Nouveau Zaal",
       "opening_hours": {
         "open_now": true
@@ -583,13 +593,18 @@
       "place_id": "some place id 14",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.1,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 1274,
       "vicinity": "Hopland 2, Antwerpen"
     },
@@ -611,7 +626,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Sir Anthony Van Dijck",
       "opening_hours": {
         "open_now": false
@@ -627,13 +642,18 @@
       "place_id": "some place id 15",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.4,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 311,
       "vicinity": "Oude Koornmarkt 16, Antwerpen"
     },
@@ -671,7 +691,7 @@
       "place_id": "some place id 16",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "rating": 4.9,
       "reference": "",
@@ -679,7 +699,7 @@
       "types": [
         "cafe",
         "lodging",
-        "restaurant",
+        "cleaningService",
         "food",
         "point_of_interest",
         "store",
@@ -706,7 +726,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "De Broers van Julienne",
       "opening_hours": {
         "open_now": true
@@ -722,7 +742,7 @@
       "place_id": "some place id 17",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.1,
@@ -730,7 +750,7 @@
       "scope": "",
       "types": [
         "meal_takeaway",
-        "restaurant",
+        "cleaningService",
         "food",
         "point_of_interest",
         "establishment"
@@ -756,7 +776,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Het Gebaar",
       "opening_hours": {
         "open_now": false
@@ -772,13 +792,18 @@
       "place_id": "some place id 18",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.7,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 362,
       "vicinity": "Leopoldstraat 24, Antwerpen"
     },
@@ -800,7 +825,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Da Giovanni Groenplaats TAKE OUT",
       "opening_hours": {
         "open_now": true
@@ -816,13 +841,18 @@
       "place_id": "some place id 19",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 3.9,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 4311,
       "vicinity": "Jan Blomstraat 8, Antwerpen"
     },
@@ -844,7 +874,7 @@
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cleaningService-71.png",
       "name": "Bij Lam & Yin",
       "opening_hours": {
         "open_now": false
@@ -860,13 +890,18 @@
       "place_id": "some place id 20",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.6,
       "reference": "",
       "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+      "types": [
+        "cleaningService",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
       "user_ratings_total": 151,
       "vicinity": "Reyndersstraat 17, Antwerpen"
     }

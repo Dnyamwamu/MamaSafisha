@@ -1,32 +1,32 @@
-import React, { useContext, useState, useEffect } from "react";
-import MapView from "react-native-maps";
-import styled from "styled-components/native";
+import React, { useContext, useState, useEffect } from 'react'
+import MapView from 'react-native-maps'
+import styled from 'styled-components/native'
 
-import { LocationContext } from "../../../services/location/location.context";
-import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
+import { LocationContext } from '../../../services/location/location.context'
+import { CleaningServicesContext } from '../../../services/cleaningServices/cleaningServices.context'
 
-import { Search } from "../components/search.component";
-import { MapCallout } from "../components/map-callout.component";
+import { Search } from '../components/search.component'
+import { MapCallout } from '../components/map-callout.component'
 
 const Map = styled(MapView)`
   height: 100%;
   width: 100%;
-`;
+`
 
 export const MapScreen = ({ navigation }) => {
-  const { location } = useContext(LocationContext);
-  const { restaurants = [] } = useContext(RestaurantsContext);
+  const { location } = useContext(LocationContext)
+  const { cleaningServices = [] } = useContext(CleaningServicesContext)
 
-  const [latDelta, setLatDelta] = useState(0);
+  const [latDelta, setLatDelta] = useState(0)
 
-  const { lat, lng, viewport } = location;
+  const { lat, lng, viewport } = location
 
   useEffect(() => {
-    const northeastLat = viewport.northeast.lat;
-    const southwestLat = viewport.southwest.lat;
+    const northeastLat = viewport.northeast.lat
+    const southwestLat = viewport.southwest.lat
 
-    setLatDelta(northeastLat - southwestLat);
-  }, [location, viewport]);
+    setLatDelta(northeastLat - southwestLat)
+  }, [location, viewport])
 
   return (
     <>
@@ -39,29 +39,29 @@ export const MapScreen = ({ navigation }) => {
           longitudeDelta: 0.02,
         }}
       >
-        {restaurants.map((restaurant) => {
+        {cleaningServices.map((cleaningService) => {
           return (
             <MapView.Marker
-              key={restaurant.name}
-              title={restaurant.name}
+              key={cleaningService.name}
+              title={cleaningService.name}
               coordinate={{
-                latitude: restaurant.geometry.location.lat,
-                longitude: restaurant.geometry.location.lng,
+                latitude: cleaningService.geometry.location.lat,
+                longitude: cleaningService.geometry.location.lng,
               }}
             >
               <MapView.Callout
                 onPress={() =>
-                  navigation.navigate("RestaurantDetail", {
-                    restaurant,
+                  navigation.navigate('CleaningServiceDetail', {
+                    cleaningService,
                   })
                 }
               >
-                <MapCallout restaurant={restaurant} />
+                <MapCallout cleaningService={cleaningService} />
               </MapView.Callout>
             </MapView.Marker>
-          );
+          )
         })}
       </Map>
     </>
-  );
-};
+  )
+}
